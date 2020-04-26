@@ -1,0 +1,75 @@
+
+--------------------------------------------------------------------------------
+VIDEO POST #2: HADOOP PARA TORPES (I)-¿QUÉ ES Y PARA QUÉ SIRVE? [5/10]
+https://www.youtube.com/watch?v=j8ehT1_G5AY
+    4 Vs en Big Data
+        Volumen
+        Variabilidad (no estructurado)
+        Veracidad
+        Velocidad
+    Hadooop
+        Ecosistema de proyectos muy diversos para que trabajen conjuntamente
+        Framework para trabajar con en Big Data
+        Fiabilidad: Nodos para redundancy
+        Escalability: Adding more nodes
+        APIs available
+        Potente: Procesado en nodos
+    HDFS (sistema de ficheros) +MapReduce Server (procesado de datos)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+VIDEO POST #3: HADOOP PARA TORPES (II)-¿CÓMO FUNCIONA? HDFS Y MAPREDUCE
+https://www.youtube.com/watch?v=NQ8mjVPCDvk
+    HDFS
+        Name Node: 
+            mapa de bloques que identifica en que bloque estan los datos
+            Heartbeat de data nodes
+        Data Node: Donde los datos estan (y replicados al menos en 3 data nodes)
+    MapReduce Server
+        Componente de procesamiento de Hadoop
+        El procesamiento se hace donde estan los datos, en el nodo de datos (en lugar de traer los datos a otro nodo y procesarlo alli)
+    Versiones de Hadoop
+        1.0
+        2.0
+    YARN permite dar acceso a HDFS desde otras aplicaciones. Originalmente MapReduce hablaba directamente con HDFS. En la version 2.0 se introduce una capa intermedia, donde MapReduce y otras aplicaciones pueden hablar con otras aplicaciones (HBase, Spark)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+VIDEO POST #4: HADOOP PARA TORPES (III Y FIN)- ECOSISTEMA Y DISTRIBUCIONES
+https://www.youtube.com/watch?v=20qWx2KYqYg
+    PIG: Lenguaje de alto nivel a jobs de MapReduce
+    Hive: Traduce SQL en Pig o MapReduce
+    Zookeeper: Almacena y facilita servicios de coordinacion para distintos servidores
+    HBase: 
+        Base datos NoSQL para acceder en tiempo real a HDFS. 
+        Hive, Pig y MapReduce acceden a HBase
+        HDFS es mejor para batch processing
+    Distribuciones Comerciales de Hadoop
+        Paquetes de Hadoop y aplicaciones que se distribuyen de forma comercial
+        Estas distribuciones pueden estar ofrecidas dentro de un Big Data suite
+        MapR
+        Cloudera
+        Hortonworks
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+UNDERSTANDING HDFS USING LEGOS [7/10]
+https://www.youtube.com/watch?v=4Gfl0WuONMY
+    Nice explanation on how HDFS works with nodes, replicacion and master node (name node)
+    HDFS will process data in the data nodes itself. It will write in a node and then HFS will write the data into the other nodes
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+HADOOP DISTRIBUTED FILE SYSTEM (HDFS) INTRODUCTION
+https://www.youtube.com/watch?v=1_ly9dZnmWc
+
+    Data Node
+        Files are broken into Blocks of 128Mb. The files are broken into files.
+        These files are replicated (usually 3 times) in DataNodes
+    NameNode
+        Manages the namespaces metada (directories and files and blocks).
+    HDFS automatically for corruption in blocks. Therefore a failed node or disk does not need to be done (unlike raid)
+
+--------------------------------------------------------------------------------
